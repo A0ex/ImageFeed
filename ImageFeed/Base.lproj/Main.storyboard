@@ -29,19 +29,44 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0dg-bF-DaQ" userLabel="Cell Image">
-                                                    <rect key="frame" x="20" y="11" width="353" height="69"/>
+                                                    <rect key="frame" x="16" y="4" width="361" height="83"/>
                                                 </imageView>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PaC-ut-Iob" userLabel="Like Button">
+                                                    <rect key="frame" x="333" y="4" width="44" height="44"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="44" id="7UY-Lc-3cb"/>
+                                                        <constraint firstAttribute="width" constant="44" id="sjy-5r-hhV"/>
+                                                    </constraints>
+                                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                    <state key="normal" image="ColouredLike">
+                                                        <color key="titleColor" name="YP Red"/>
+                                                    </state>
+                                                    <buttonConfiguration key="configuration" style="plain" image="Like"/>
+                                                </button>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="22h-vL-j6I" userLabel="Date Label">
+                                                    <rect key="frame" x="24" y="63.333333333333336" width="33" height="15.666666666666664"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <color key="backgroundColor" name="YP Black"/>
                                             <constraints>
-                                                <constraint firstItem="0dg-bF-DaQ" firstAttribute="top" secondItem="jY1-op-rPS" secondAttribute="topMargin" id="6tn-1o-vUK"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="0dg-bF-DaQ" secondAttribute="bottom" id="S0W-dH-9cp"/>
-                                                <constraint firstItem="0dg-bF-DaQ" firstAttribute="leading" secondItem="jY1-op-rPS" secondAttribute="leadingMargin" id="YYi-HW-Old"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="0dg-bF-DaQ" secondAttribute="trailing" id="p4B-Ew-CjE"/>
+                                                <constraint firstItem="22h-vL-j6I" firstAttribute="trailing" relation="lessThanOrEqual" secondItem="0dg-bF-DaQ" secondAttribute="trailing" constant="-8" id="4B9-eK-PyW"/>
+                                                <constraint firstItem="0dg-bF-DaQ" firstAttribute="top" secondItem="jY1-op-rPS" secondAttribute="top" constant="4" id="6tn-1o-vUK"/>
+                                                <constraint firstItem="PaC-ut-Iob" firstAttribute="top" secondItem="0dg-bF-DaQ" secondAttribute="top" id="JBf-oU-Pfj"/>
+                                                <constraint firstAttribute="bottom" secondItem="0dg-bF-DaQ" secondAttribute="bottom" constant="4" id="S0W-dH-9cp"/>
+                                                <constraint firstAttribute="leading" secondItem="0dg-bF-DaQ" secondAttribute="leading" constant="-16" id="YYi-HW-Old"/>
+                                                <constraint firstItem="PaC-ut-Iob" firstAttribute="trailing" secondItem="0dg-bF-DaQ" secondAttribute="trailing" id="cQA-Ol-eZz"/>
+                                                <constraint firstItem="22h-vL-j6I" firstAttribute="leading" secondItem="0dg-bF-DaQ" secondAttribute="leading" constant="8" id="gWP-7d-jeo"/>
+                                                <constraint firstAttribute="trailing" secondItem="0dg-bF-DaQ" secondAttribute="trailing" constant="16" id="p4B-Ew-CjE"/>
+                                                <constraint firstItem="22h-vL-j6I" firstAttribute="bottom" secondItem="0dg-bF-DaQ" secondAttribute="bottom" constant="-8" id="pgh-cx-2Bv"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="cellImage" destination="0dg-bF-DaQ" id="j43-z9-AzH"/>
+                                            <outlet property="dateLabel" destination="22h-vL-j6I" id="2ei-Sl-J51"/>
+                                            <outlet property="likeButton" destination="PaC-ut-Iob" id="fuH-wE-d15"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -66,8 +91,13 @@
         </scene>
     </scenes>
     <resources>
+        <image name="ColouredLike" width="42" height="42"/>
+        <image name="Like" width="42" height="42"/>
         <namedColor name="YP Black">
             <color red="0.10199999809265137" green="0.10599999874830246" blue="0.13300000131130219" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="YP Red">
+            <color red="0.96100002527236938" green="0.41999998688697815" blue="0.42399999499320984" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>
