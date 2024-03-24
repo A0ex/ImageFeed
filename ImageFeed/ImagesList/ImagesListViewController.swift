@@ -36,6 +36,9 @@ final class ImagesListViewController: UIViewController {
         cell.cellImage.image = image
         cell.cellImage.layer.masksToBounds = true
         cell.cellImage.layer.cornerRadius = 16
+        cell.gradientView.layer.maskedCorners = [.layerMinXMaxYCorner, .layerMaxXMaxYCorner]
+        cell.gradientView.layer.cornerRadius = 16
+        cell.gradientView.layer.masksToBounds = true
         if indexPath.row % 2 == 0 {
             cell.likeButton.imageView?.image = UIImage(named: "ColouredLike")
         } else {
