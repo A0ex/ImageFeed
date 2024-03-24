@@ -44,6 +44,9 @@ final class ImagesListViewController: UIViewController {
     }
 }
 
+
+// MARK: - UITableViewDelegate
+
 extension ImagesListViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
@@ -61,6 +64,8 @@ extension ImagesListViewController: UITableViewDelegate {
         return imageHeight
     }
 }
+
+// MARK: - UITableViewDataSource
 
 extension ImagesListViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
