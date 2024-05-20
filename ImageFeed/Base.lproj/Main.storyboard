@@ -127,6 +127,9 @@
                                 </subviews>
                                 <viewLayoutGuide key="contentLayoutGuide" id="ykE-gj-gAA"/>
                                 <viewLayoutGuide key="frameLayoutGuide" id="l1Y-TZ-bFB"/>
+                                <connections>
+                                    <outlet property="delegate" destination="luQ-lU-R7G" id="bQt-DM-gZr"/>
+                                </connections>
                             </scrollView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lso-Un-sPq">
                                 <rect key="frame" x="9" y="9" width="48" height="48"/>
