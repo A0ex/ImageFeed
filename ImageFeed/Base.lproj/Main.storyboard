@@ -131,7 +131,7 @@
                                     <outlet property="delegate" destination="luQ-lU-R7G" id="bQt-DM-gZr"/>
                                 </connections>
                             </scrollView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lso-Un-sPq">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lso-Un-sPq" userLabel="Back Button">
                                 <rect key="frame" x="9" y="9" width="48" height="48"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="48" id="6UQ-PM-tfk"/>
@@ -143,14 +143,24 @@
                                     <action selector="didTapBackButton" destination="luQ-lU-R7G" eventType="touchUpInside" id="dlq-nD-3aN"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hos-hv-nKi" userLabel="Sharing Button">
+                                <rect key="frame" x="171" y="785" width="51" height="51"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="Sharing"/>
+                                <connections>
+                                    <action selector="didTapShareButton:" destination="luQ-lU-R7G" eventType="touchUpInside" id="ihl-Ny-bXm"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="pDq-LD-evu"/>
                         <color key="backgroundColor" red="0.10196078431372549" green="0.10588235294117647" blue="0.13333333333333333" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="czM-vL-E1D" firstAttribute="top" secondItem="Nsf-LL-AcW" secondAttribute="top" id="4ff-sa-Q0R"/>
+                            <constraint firstItem="hos-hv-nKi" firstAttribute="centerX" secondItem="pDq-LD-evu" secondAttribute="centerX" id="95K-x4-fHp"/>
                             <constraint firstItem="czM-vL-E1D" firstAttribute="leading" secondItem="pDq-LD-evu" secondAttribute="leading" id="Cos-Tn-q8r"/>
                             <constraint firstItem="lso-Un-sPq" firstAttribute="leading" secondItem="pDq-LD-evu" secondAttribute="leading" constant="9" id="Vkd-KC-yFb"/>
                             <constraint firstItem="pDq-LD-evu" firstAttribute="trailing" secondItem="czM-vL-E1D" secondAttribute="trailing" id="h3R-h6-Sm0"/>
+                            <constraint firstItem="pDq-LD-evu" firstAttribute="bottom" secondItem="hos-hv-nKi" secondAttribute="bottom" constant="16" id="iIj-1q-dMF"/>
                             <constraint firstItem="lso-Un-sPq" firstAttribute="top" secondItem="pDq-LD-evu" secondAttribute="top" constant="9" id="ogk-wB-KEc"/>
                             <constraint firstAttribute="bottom" secondItem="czM-vL-E1D" secondAttribute="bottom" id="wGR-KB-Abo"/>
                         </constraints>
@@ -163,7 +173,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OIz-Yq-Itr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="79" y="123"/>
+            <point key="canvasLocation" x="78.625954198473281" y="122.53521126760565"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="ENb-Sa-x0u">
@@ -255,6 +265,7 @@
         <image name="Like" width="42" height="42"/>
         <image name="LogoutButton" width="24" height="24"/>
         <image name="ProfilePhoto" width="70" height="70"/>
+        <image name="Sharing" width="51" height="51"/>
         <image name="profile_active" width="75" height="49"/>
         <image name="tab_editorial_active" width="30" height="30"/>
         <namedColor name="YP Black">
