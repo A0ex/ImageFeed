@@ -90,6 +90,7 @@ final class ProfileViewController: UIViewController {
         declarationLabel.text = "Hello world!"
         declarationLabel.font = UIFont.systemFont(ofSize: 13, weight: .regular)
         declarationLabel.textColor = .ypWhite
+        declarationLabel.numberOfLines = 0 // при необходимости текст переносится на другую строку
         declarationLabel.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(declarationLabel)
         
