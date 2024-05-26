@@ -84,7 +84,6 @@ final class ProfileViewController: UIViewController {
             descriptionLabel.topAnchor.constraint(equalTo: nameLabel.bottomAnchor, constant: 8)
         ])
     }
-
     
     private func configureDeclarationLabel() {
         declarationLabel.text = "Hello world!"
