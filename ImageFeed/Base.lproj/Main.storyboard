@@ -199,58 +199,12 @@
         <!--Profile-->
         <scene sceneID="R44-b7-oS0">
             <objects>
-                <viewController title="Profile" id="ulN-aM-izk" userLabel="Profile" sceneMemberID="viewController">
+                <viewController title="Profile" id="ulN-aM-izk" userLabel="Profile" customClass="ProfileViewController" customModule="ImageFeed" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fo4-DQ-H82">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ProfilePhoto" translatesAutoresizingMaskIntoConstraints="NO" id="m7U-Xu-ibU">
-                                <rect key="frame" x="16" y="91" width="70" height="70"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="70" id="kkN-FA-rWB"/>
-                                    <constraint firstAttribute="width" constant="70" id="uWg-XM-xoe"/>
-                                </constraints>
-                            </imageView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="iEi-4Z-kKi">
-                                <rect key="frame" x="16" y="169" width="216.66666666666666" height="75"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Екатерина Новикова" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DnL-WE-ckx" userLabel="Name Label">
-                                        <rect key="frame" x="0.0" y="0.0" width="216.66666666666666" height="27.666666666666668"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="23"/>
-                                        <color key="textColor" name="YP White"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="@ekaterina_nov" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XBx-L2-lmU" userLabel="Login Name Label">
-                                        <rect key="frame" x="0.0" y="35.666666666666657" width="216.66666666666666" height="15.666666666666664"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                        <color key="textColor" red="0.68235294117647061" green="0.68627450980392157" blue="0.70588235294117641" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello, world!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ayy-92-siq" userLabel="Description Label">
-                                        <rect key="frame" x="0.0" y="59.333333333333336" width="216.66666666666666" height="15.666666666666664"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                        <color key="textColor" name="YP White"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                            </stackView>
-                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kn6-sC-7Ug">
-                                <rect key="frame" x="345" y="114" width="24" height="24"/>
-                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" image="LogoutButton"/>
-                            </button>
-                        </subviews>
                         <viewLayoutGuide key="safeArea" id="dsn-Ez-4nm"/>
                         <color key="backgroundColor" red="0.10196078431372549" green="0.10588235294117647" blue="0.13333333333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstAttribute="trailing" secondItem="Kn6-sC-7Ug" secondAttribute="trailing" constant="24" id="Ebt-0O-sle"/>
-                            <constraint firstItem="m7U-Xu-ibU" firstAttribute="top" secondItem="dsn-Ez-4nm" secondAttribute="top" constant="32" id="OaK-mj-qji"/>
-                            <constraint firstItem="Kn6-sC-7Ug" firstAttribute="top" secondItem="dsn-Ez-4nm" secondAttribute="top" constant="55" id="RRK-4Y-eWt"/>
-                            <constraint firstItem="iEi-4Z-kKi" firstAttribute="top" secondItem="m7U-Xu-ibU" secondAttribute="bottom" constant="8" id="ecp-D0-EPL"/>
-                            <constraint firstItem="iEi-4Z-kKi" firstAttribute="leading" secondItem="fo4-DQ-H82" secondAttribute="leading" constant="16" id="ueh-Qr-Lar"/>
-                            <constraint firstItem="m7U-Xu-ibU" firstAttribute="leading" secondItem="fo4-DQ-H82" secondAttribute="leading" constant="16" id="y4L-1u-LJ1"/>
-                            <constraint firstItem="Kn6-sC-7Ug" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="m7U-Xu-ibU" secondAttribute="trailing" id="yqa-i4-w6G"/>
-                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="profile_active" id="Oqg-p3-qTo"/>
                 </viewController>
@@ -263,8 +217,6 @@
         <image name="Backward" width="24" height="24"/>
         <image name="ColouredLike" width="42" height="42"/>
         <image name="Like" width="42" height="42"/>
-        <image name="LogoutButton" width="24" height="24"/>
-        <image name="ProfilePhoto" width="70" height="70"/>
         <image name="Sharing" width="51" height="51"/>
         <image name="profile_active" width="75" height="49"/>
         <image name="tab_editorial_active" width="30" height="30"/>
@@ -273,9 +225,6 @@
         </namedColor>
         <namedColor name="YP Red">
             <color red="0.96100002527236938" green="0.41999998688697815" blue="0.42399999499320984" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="YP White">
-            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>
