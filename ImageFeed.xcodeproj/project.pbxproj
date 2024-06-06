@@ -10,6 +10,10 @@
 		FA0F145C2BF6628E007B9ACC /* SingleImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0F145B2BF6628E007B9ACC /* SingleImageViewController.swift */; };
 		FA10EAC82BAA871E00C0B14D /* ImagesListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA10EAC72BAA871E00C0B14D /* ImagesListCell.swift */; };
 		FA42EFE32BB11F7D00E01768 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA42EFE22BB11F7D00E01768 /* ProfileViewController.swift */; };
+		FA59C19D2C102D8800046FF5 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA59C19C2C102D8800046FF5 /* Constants.swift */; };
+		FA59C19F2C10B3BB00046FF5 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA59C19E2C10B3BB00046FF5 /* AuthViewController.swift */; };
+		FA59C1A22C10D2B800046FF5 /* WebViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA59C1A12C10D2B800046FF5 /* WebViewViewController.swift */; };
+		FA59C1A52C119AB700046FF5 /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA59C1A42C119AB700046FF5 /* UIImageExtension.swift */; };
 		FADEE6D32B95A99A00EA35FE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FADEE6D22B95A99A00EA35FE /* AppDelegate.swift */; };
 		FADEE6D52B95A99A00EA35FE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FADEE6D42B95A99A00EA35FE /* SceneDelegate.swift */; };
 		FADEE6D72B95A99A00EA35FE /* ImagesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FADEE6D62B95A99A00EA35FE /* ImagesListViewController.swift */; };
@@ -22,6 +26,10 @@
 		FA0F145B2BF6628E007B9ACC /* SingleImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleImageViewController.swift; sourceTree = "<group>"; };
 		FA10EAC72BAA871E00C0B14D /* ImagesListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesListCell.swift; sourceTree = "<group>"; };
 		FA42EFE22BB11F7D00E01768 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		FA59C19C2C102D8800046FF5 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		FA59C19E2C10B3BB00046FF5 /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
+		FA59C1A12C10D2B800046FF5 /* WebViewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewViewController.swift; sourceTree = "<group>"; };
+		FA59C1A42C119AB700046FF5 /* UIImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
 		FADEE6CF2B95A99A00EA35FE /* ImageFeed.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ImageFeed.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FADEE6D22B95A99A00EA35FE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FADEE6D42B95A99A00EA35FE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -68,6 +76,23 @@
 			path = SingleImage;
 			sourceTree = "<group>";
 		};
+		FA59C1A02C10C16000046FF5 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				FA59C19E2C10B3BB00046FF5 /* AuthViewController.swift */,
+				FA59C1A12C10D2B800046FF5 /* WebViewViewController.swift */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		FA59C1A32C119A9D00046FF5 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				FA59C1A42C119AB700046FF5 /* UIImageExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		FADEE6C62B95A99A00EA35FE = {
 			isa = PBXGroup;
 			children = (
@@ -87,6 +112,9 @@
 		FADEE6D12B95A99A00EA35FE /* ImageFeed */ = {
 			isa = PBXGroup;
 			children = (
+				FA59C1A32C119A9D00046FF5 /* Extensions */,
+				FA59C1A02C10C16000046FF5 /* Auth */,
+				FA59C19C2C102D8800046FF5 /* Constants.swift */,
 				FA1AE7652BFB09E000878DEF /* SingleImage */,
 				FA1AE7642BFB09CE00878DEF /* Profile */,
 				FA10EAC92BAA874800C0B14D /* ImagesList */,
@@ -174,8 +202,12 @@
 				FADEE6D72B95A99A00EA35FE /* ImagesListViewController.swift in Sources */,
 				FA10EAC82BAA871E00C0B14D /* ImagesListCell.swift in Sources */,
 				FA42EFE32BB11F7D00E01768 /* ProfileViewController.swift in Sources */,
+				FA59C1A52C119AB700046FF5 /* UIImageExtension.swift in Sources */,
+				FA59C19D2C102D8800046FF5 /* Constants.swift in Sources */,
+				FA59C19F2C10B3BB00046FF5 /* AuthViewController.swift in Sources */,
 				FADEE6D32B95A99A00EA35FE /* AppDelegate.swift in Sources */,
 				FA0F145C2BF6628E007B9ACC /* SingleImageViewController.swift in Sources */,
+				FA59C1A22C10D2B800046FF5 /* WebViewViewController.swift in Sources */,
 				FADEE6D52B95A99A00EA35FE /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
