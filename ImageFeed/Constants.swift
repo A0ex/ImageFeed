@@ -8,6 +8,7 @@
 import Foundation
 
 enum Constants {
+    static let unsplashAuthorizeURLString = "https://unsplash.com/oauth/authorize"
     static let accessKey = "L4LfVLfwu1JY4T4WR1qMdSkCNnbI0CoolZTkwK3XmEk"
     static let secretKey = "qT5BDelLHQBcGslDYtSwhwa1mgb2l5xrWSvsLDwzaC8"
     static let redirectURI = "urn:ietf:wg:oauth:2.0:oob"

@@ -20,6 +20,15 @@ final class AuthViewController: UIViewController {
         configureBackButton()
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        super.prepare(for: segue, sender: sender)
+        
+        if segue.identifier == "ShowWebView", let webViewViewController = segue.destination as? WebViewViewController {
+            webViewViewController.delegate = self
+        }
+    }
+    
+    
     private func configureBackgroundIcon() {
         let backgroundImage = UIImage(named: "Logo_of_Unsplash")
         backgroundImageView.image = backgroundImage
@@ -64,5 +73,24 @@ final class AuthViewController: UIViewController {
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
         navigationItem.backBarButtonItem?.tintColor = UIColor(hex: "#1A1B22")
     }
+    
+}
 
+extension AuthViewController: WebViewViewControllerDelegate {
+    func webViewViewControllerDidCancel(_ vc: WebViewViewController) {
+        self.navigationController?.popViewController(animated: true)
+    }
+    
+    func webViewViewController(_ vc: WebViewViewController, didAuthenticateWithCode code: String) {
+        OAuth2Service.shared.fetchOAuthToken(code: code) { result in
+            switch result {
+            case .success(let token):
+                print("Успешно получен токен: \(token)")
+                
+            case .failure(let error):
+                print("Ошибка при получении токена: \(error)")
+            }
+        }
+    }
+    
 }

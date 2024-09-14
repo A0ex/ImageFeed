@@ -4,7 +4,7 @@
     <accessibilityOverrides dynamicTypePreference="2"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -248,10 +248,17 @@
                                     <wkPreferences key="preferences"/>
                                 </wkWebViewConfiguration>
                             </wkWebView>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="imV-OS-FlU">
+                                <rect key="frame" x="0.0" y="103" width="393" height="4"/>
+                                <color key="progressTintColor" red="0.10196078431372549" green="0.10588235294117647" blue="0.13333333333333333" alpha="1" colorSpace="calibratedRGB"/>
+                            </progressView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="8C8-CU-MEv"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="imV-OS-FlU" firstAttribute="leading" secondItem="8C8-CU-MEv" secondAttribute="leading" id="56M-ke-oOs"/>
+                            <constraint firstItem="imV-OS-FlU" firstAttribute="top" secondItem="8C8-CU-MEv" secondAttribute="top" id="9E3-gX-bjs"/>
+                            <constraint firstItem="8C8-CU-MEv" firstAttribute="trailing" secondItem="imV-OS-FlU" secondAttribute="trailing" id="9I3-aA-kYt"/>
                             <constraint firstAttribute="trailing" secondItem="LsP-7l-cPX" secondAttribute="trailing" id="Pla-T7-Ugu"/>
                             <constraint firstItem="LsP-7l-cPX" firstAttribute="top" secondItem="8C8-CU-MEv" secondAttribute="top" id="QBg-n5-xPU"/>
                             <constraint firstAttribute="bottom" secondItem="LsP-7l-cPX" secondAttribute="bottom" id="Uaq-Xp-hKa"/>
@@ -260,6 +267,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="MQo-T6-bjL"/>
                     <connections>
+                        <outlet property="progressView" destination="imV-OS-FlU" id="j3g-RP-BDf"/>
                         <outlet property="webView" destination="LsP-7l-cPX" id="Nsy-V9-ZVN"/>
                     </connections>
                 </viewController>
